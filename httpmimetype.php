@@ -108,7 +108,7 @@ class HTTPMimeType {
      * @return mixed negotiated MimeType or defaultType
      */
     public static function negotiateAcceptType(array $supportedTypes, $defaultType = null) {
-        return static::_negotiateMimeType($_SERVER['HTTP_ACCEPT'], $supportedTypes, $defaultType);
+        return static::negotiateMimeTypeString($_SERVER['HTTP_ACCEPT'], $supportedTypes, $defaultType);
     }
 
     /**
